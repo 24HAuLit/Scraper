@@ -1,0 +1,14 @@
+{
+  "name": "virustotal-openapi-scraper",
+  "version": "1.0.0",
+  "description": "Scraper to convert VirusTotal online documentation to OpenAPI specifications",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "dependencies": {
+    "puppeteer": "^13.0.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}

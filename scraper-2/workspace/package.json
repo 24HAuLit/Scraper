@@ -1,0 +1,19 @@
+{
+  "name": "virustotal-documentation-scraper",
+  "version": "1.0.0",
+  "description": "A scraper to convert VirusTotal online documentation to OpenAPI specifications",
+  "main": "src/entrypoint.ts",
+  "scripts": {
+    "start": "ts-node src/entrypoint.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "puppeteer": "^13.0.0",
+    "typescript": "^4.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.17",
+    "ts-node": "^10.4.0"
+  }
+}

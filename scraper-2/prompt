@@ -1,0 +1,5 @@
+Scraper to convert VirusTotal online documentation (https://developers.virustotal.com/reference/overview) to OpenAPI specifications (https://swagger.io/specification/).
+You need to parse the entire VirusTotal documention by using the library Puppeteer (https://pptr.dev/) and write code in TypeScript.
+The output will be in json format.
+
+Take all your time to make all the code. Human has just to copy paste your code
