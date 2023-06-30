@@ -1,4 +1,4 @@
-import puppeteer, { Browser, Page } from 'puppeteer';
+import puppeteer, {Browser, Page} from 'puppeteer';
 import fs from 'fs';
 
 class Scraper {
@@ -23,9 +23,9 @@ class Scraper {
     }
 
     // Scrape the documentation content and generate the OpenAPI specifications
-    const openApiSpecs = await this.page.evaluate(() => {
+    return await this.page.evaluate(() => {
       // Implement the scraping logic here
-      process.stdout.write('Scraping the documentation...');   
+      process.stdout.write('Scraping the documentation...');
       const openApiSpecs = {};
       const overview = document.querySelector('#overview');
       const overviewContent = overview?.nextElementSibling;
@@ -41,7 +41,7 @@ class Scraper {
       let currentTagContentArrayLength = 0;
       let currentTagContentArrayFiltered = [];
       let currentTagContentArrayFilteredLength = 0;
-      let currentTagContentArrayFilteredObject = {};
+      let currentTagContentArrayFilteredObject: Array<> = {};
       let currentTagContentArrayFilteredObjectKey = '';
       let currentTagContentArrayFilteredObjectValue = '';
       let currentTagContentArrayFilteredObjectValueArray = [];
@@ -110,8 +110,6 @@ class Scraper {
       process.stdout.write('Done\n');
       return openApiSpecs;
     });
-
-    return openApiSpecs;
   }
 
   async saveSpecifications(specs: object): Promise<void> {
